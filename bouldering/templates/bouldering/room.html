@@ -1,0 +1,97 @@
+{% extends "bouldering/header.html" %}
+
+{% block room %}
+<!--<div class="container-sm">-->
+  <svg id="room-svg" viewBox="0 0 290 435">
+    {% for id, w in walls.items %}
+      <a href="{% url 'bouldering:wall_section' id %}">
+        <line class="back" x1="{{w.sx}}" x2="{{w.x}}" y1="{{w.sy}}" y2="{{w.y}}" />
+        <line class="front" x1="{{w.sx}}" x2="{{w.x}}" y1="{{w.sy}}" y2="{{w.y}}" />
+      </a>
+    {% endfor %}
+  </svg>
+<!--
+  <div class="container-sm py-4 my-6" style="max-width: 300px;">
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 1 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 2 %}" class="btn btn-primary" style="transform: translateX(150%);"></a></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 3 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateY(-90%);"></a></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 4 %}" class="btn btn-primary" style="transform: translateX(-40%);"></a></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 5 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(10%) translateY(-100%);"></a></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 6 %}" class="btn btn-primary"></a></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 7 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 8 %}" class="btn btn-primary" style="transform: translateX(270%) translateY(-5%) rotate(-30deg);"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 9 %}" class="btn btn-primary" style="padding: 21px 4px; transform: translateX(-100%) rotate(15deg);"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 10 %}" class="btn btn-primary"></a></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 11 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(-40%);"></a></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 12 %}" class="btn btn-primary" style="transform: translateX(-200%) translateY(5%);"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 13 %}" class="btn btn-primary" style="padding: 25px 4px; transform: translateX(-130%) rotate(30deg);"></a></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 14 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 15 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(-40%) translateY(-100%);"></a></div>
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 16 %}" class="btn btn-primary" style="transform: translateX(230%);"></a></div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 16 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 17 %}" class="btn btn-primary" style="transform: translateX(230%);"></a></div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 18 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"><a role="button"mhref="{% url 'bouldering:wall_section' 19 %}" class="btn btn-primary" style="transform: translateX(230%);"></a></div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 20 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+      <div class="col-2"></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 21 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(10%) translateY(430%);"></a></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 22 %}" class="btn btn-primary" style="transform: translateX(230%);"></a></div>
+      <div class="col-1"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 23 %}" class="btn btn-primary"></a></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 24 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(-30%) translateY(400%);"></a></div>
+      <div class="col-1"></div>
+      <div class="col-2"><a role="button" href="{% url 'bouldering:wall_section' 25 %}" class="btn btn-primary" style="transform: translateX(420%) translateY(0%);"></a></div>
+      <div class="col-1"><a role="button" href="{% url 'bouldering:wall_section' 26 %}" class="btn btn-primary" style="padding: 4px 22px; transform: translateX(10%) translateY(400%);"></a></div>
+      <div class="col-2"></div>
+      <div class="col-1"></div>
+    </div>
+  </div>
+-->
+<!--</div>-->
+{% endblock %}

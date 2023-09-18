@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap');
+* {
+  box-sizing: initial;
+}
+body {
+  padding-bottom: 70px;
+  font-family: 'Poppins';
+  background: #f5f5f5; /*#021691;*/
+}
+#welcome-message {
+  padding: 12px 0;
+}
+#welcome-message h1, #welcome-message h2 {
+  color: #111;
+  font-weight: 600;
+  margin: 0;
+}
+#welcome-message h1 {
+  font-size: 40px;
+}
+svg#room-svg {
+  height: 60vh;
+  width: 38vh;
+  display: block;
+  margin: 0 auto;
+}
+nav.navbar {
+  display: block;
+  background-color: white;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  padding: 14px 0 7px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 9%);
+}
+.navbar-nav {
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.navbar-nav a {
+  display: block;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  opacity: .6;
+  font-size: 10px;
+  padding: 2px 0 9px;
+}
+.nav-item.active {
+  font-weight: 500;
+  opacity: 1;
+}
+.nav-svg-icon {
+  fill: none;
+  stroke: black;
+  stroke-linecap:round;
+  stroke-linejoin: round;
+  height: 28px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 4px;
+}
+#room-svg line {
+  fill: none;
+  stroke-linecap: round;
+}
+#room-svg line.front {
+  stroke: #021691;
+  stroke-width: 15;
+}
+#room-svg line.back {
+  stroke: #f5f5f5; /*#021691;*/
+  stroke-width: 22;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.btn-primary {
+  padding: 22px 4px;
+}
+.btn-outline-dark {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+.justify-content-center .col-sm-auto {
+  position: relative;
+}
+.col-sm-auto .row{
+  padding: 2px;
+}
+.form-row {
+  border:  1px solid #e2e2e2;
+  margin:  10px;
+  padding: 20px;
+  background: #ddeeff;
+}
+.btn-group .btn {
+  width: 50px;
+}
+#Image::before {
+  content: "Select Photo of Wall";
+  position: absolute;
+  z-index: 2;
+  background-color:	#808080;
+}
+#Image::file-selector-button {
+  background-color: #808080;
+  content: "Select Photo";
+  width: 170px;
+}
